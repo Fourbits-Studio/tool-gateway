@@ -1,0 +1,54 @@
+{
+  "name": "@fourbits-studio/tool-gateway",
+  "version": "0.1.0",
+  "description": "A lightweight, type-safe and extensible AI tool gateway for TypeScript, Node.js and Bun.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "ai",
+    "llm",
+    "tool-calling",
+    "function-calling",
+    "gateway",
+    "typescript",
+    "nodejs",
+    "bun"
+  ],
+  "author": "Fourbits Studio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fourbits-Studio/tool-gateway.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fourbits-Studio/tool-gateway/issues"
+  },
+  "homepage": "https://github.com/Fourbits-Studio/tool-gateway#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2"
+  },
+  "peerDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
